@@ -1,0 +1,35 @@
+{
+  "name": "face-recognition-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "homepage": "#",
+  "scripts": {
+    "start": "electron .",
+    "build:pi": "electron-builder --linux --arm64"
+  },
+  "build": {
+    "productName": "FaceApp",
+    "appId": "com.development.faceapp",
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "assets/icon.png",
+      "maintainer": "Geonjun Kim"
+    },
+    "asar": true,
+    "asarUnpack": [
+      "**/*.node",
+      "**/models/**"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^37.1.0",
+    "electron-builder": "^26.0.12"
+  }
+}
